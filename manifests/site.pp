@@ -60,3 +60,11 @@ exec {"cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
  creates => '/etc/motd',
  }
 }
+
+#Add entry to /etc/hosts
+host { 'testing.puppetlabs.vm':
+  ensure => 'present',
+  ip     => '127.0.0.1',
+  target => '/etc/hosts',
+ }
+}
