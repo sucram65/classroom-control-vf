@@ -58,3 +58,6 @@ package { 'cowsay':
   ensure   => present,
   provider => gem,
 }
+
+#generate new /etc/motd
+"cowsay 'Welcome to ${::fqdn}!' > /etc/motd"
