@@ -45,7 +45,7 @@ node default {
   notify { "Hello, my name is ${::hostname}": }
 }
 
-#changes to motd
+#Managing /etc/motd
 file { '/etc/motd':
   ensure  => file,
   owner   => 'root',
