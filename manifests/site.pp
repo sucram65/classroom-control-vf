@@ -46,18 +46,18 @@ node default {
 }
 
 #Managing /etc/motd
-file { '/etc/motd':
-  ensure  => file,
-  owner   => 'root',
-  group   => 'root',
-  mode    => '0644',
-  content => "You are a scholar and a gentleman!\n",
-}
+#file { '/etc/motd':
+#  ensure  => file,
+#  owner   => 'root',
+#  group   => 'root',
+#  mode    => '0644',
+#  content => "You are a scholar and a gentleman!\n",
+#}
 
-package { 'cowsay':
-  ensure   => present,
-  provider => gem,
-}
+#package { 'cowsay':
+#  ensure   => present,
+#  provider => gem,
+#}
 
 #generate new /etc/motd
 "cowsay 'Welcome to ${::fqdn}!' > /etc/motd"
