@@ -55,16 +55,16 @@ node default {
 #}
 
 #generate new /etc/motd
-exec {"cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
- path => '/usr/bin:/usr/local/bin',
- creates => '/etc/motd',
- }
-}
+#exec {"cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
+# path => '/usr/bin:/usr/local/bin',
+# creates => '/etc/motd',
+# }
+#}
 
 #Add entry to /etc/hosts
-host { 'testing.puppetlabs.vm':
-  ensure => 'present',
-  ip     => '127.0.0.1',
+#host { 'testing.puppetlabs.vm':
+#  ensure => 'present',
+#  ip     => '127.0.0.1',
 #  target => '/etc/hosts',
-  }
-}
+#  }
+#}
