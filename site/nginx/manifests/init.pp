@@ -1,8 +1,5 @@
 class nginx {
- package { 'nginx':
-  ensure => 'present',
-  }
-  
+ 
   file {
    ensure => file,
    owner => 'root',
