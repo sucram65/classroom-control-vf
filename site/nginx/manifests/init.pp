@@ -7,6 +7,10 @@ class nginx {
    mode => '0664',
  }
   
+  package { 'nginx':
+    ensure => 'present',
+ }
+  
  file { '/var/www':
   ensure => directory,
 }
