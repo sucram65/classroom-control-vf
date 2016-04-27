@@ -1,6 +1,1 @@
-class nginx {
-package { 'nginx':
-ensure => 'present',
- {
- file 
-}
+include nginx
