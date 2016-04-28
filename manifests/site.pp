@@ -50,7 +50,7 @@ ini_setting { 'random ordering':
 
 node default {
 include nginx
-}
+#}
 
   notify { "Hello, my name is ${::hostname}": }
 
