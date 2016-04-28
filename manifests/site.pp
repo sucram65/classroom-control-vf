@@ -49,10 +49,10 @@ ini_setting { 'random ordering':
 #}
 
 node default {
-include nginx
+#include nginx
 #}
 
-  notify { "Hello, my name is ${::hostname}": }
+notify { "Hello, my name is ${::hostname}": }
 
 if $::virtual != 'physical' {
 $vmname = capitalize($::virtual)
@@ -66,8 +66,8 @@ notify { $message: }
 
 
 #include users
-include memcached
-include nginx
+#include memcached
+#include nginx
 
 # file {'/etc/motd':
 # ensure => file,
