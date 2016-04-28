@@ -4,7 +4,7 @@ case $::osfamily {
 $package = 'nginx'
 $owner = 'root'
 $group = 'root'
-$docroot = '/var/www'
+#$docroot = '/var/www'
 $confdir = '/etc/nginx'
 $logdir = '/var/log/nginx'
 }
@@ -12,7 +12,7 @@ $logdir = '/var/log/nginx'
 $package = 'nginx-service'
 $owner = 'Administrator'
 $group = 'Administrators'
-$docroot = 'C:/ProgramData/nginx/html'
+#$docroot = 'C:/ProgramData/nginx/html'
 $confdir = 'C:/ProgramData/nginx'
 $logdir = 'C:/ProgramData/nginx/logs'
 }
@@ -30,7 +30,7 @@ class nginx (
 $package = $nginx::params::package,
 $owner = $nginx::params::owner,
 $group = $nginx::params::group,
-$docroot = $nginx::params::docroot,
+#$docroot = $nginx::params::docroot,
 $confdir = $nginx::params::confdir,
 $logdir = $nginx::params::logdir,
 $user = $nginx::params::user,
